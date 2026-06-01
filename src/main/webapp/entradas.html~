@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Vicario</title>
+    <link href="Css/style.css" rel="stylesheet">
+    <!--Fonte de Letra-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!--Ícones-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1><a class="title" href="home.html">Vicario</a></h1>
+    <nav class="nav_em">
+        <div class="dropdown">
+            <a class="dropbtn">Ementas ▼</a>
+            <div class="dropdown-content">
+                <a href="massas.html">Massas</a>
+                <a href="pizzas.html">Pizzas</a>
+                <a href="carnes.html">Carnes</a>
+                <a href="entradas.html">Entradas</a>
+                <a href="sobremesas.html">Sobremesas</a>
+                <a href="bebidas.jsp">Bebidas</a>
+            </div>
+        </div>
+
+        <a href="about.jsp">Sobre Nós</a>
+        <a href="pedidotakeaway.jsp"><i class="fa fa-shopping-cart icon"></i></a>
+        <a href="perfil.jsp"><i class="fa fa-user-o icon_em"></i></a>
+    </nav>
+</header>
+<form action="adicionar.jsp" class="adicionar" method="post">
+    <div class="container">
+        <h1 class="titulo">Entradas</h1>
+        <input id="pratoSelecionado" name="pratoSelecionado" type="hidden">
+
+        <div class="direita">
+            <img alt="tabuaenchidos" src="images/tabuaenchidos.png">
+            <div class="card-content">
+                <h2>Tábua de Enchidos Artesanais</h2>
+                <p>Descubra a nossa seleção de enchidos artesanais,<br> acompanhada de pão crocante e compota
+                    caseira,<br> perfeita para partilhar e saborear momentos especiais.</p>
+                <p class="price">Preço: 14,00€</p>
+                <input class="botao" onclick="selecionarPrato('tabua de enchidos artesanais')" type="submit" value="Adicionar ao pedido">
+
+                <label class="botao" for="popup4">Adicionar ao
+                    pedido</label>
+            </div>
+        </div>
+
+        <div class="esquerda">
+            <img alt="canape" src="images/canape.png">
+            <div class="card-content">
+                <h2>Canapés Gourmet</h2>
+                <p class="desc">Deliciosas combinações de sabores em canapés<br> artesanais, perfeitos para começar a
+                    sua experiência<br> gastronómica com elegância e requinte.</p>
+                <p class="price">Preço: 12,00€ (10-12 unidades)</p>
+                <input class="botao" onclick="selecionarPrato('canapes gourmet')" type="submit" value="Adicionar ao pedido">
+                <label class="botao" for="popup4">Adicionar ao
+                    pedido</label>
+            </div>
+        </div>
+
+        <div class="direita">
+            <img alt="batatarecheada" src="images/batatarecheada.png">
+            <div class="card-content">
+                <h2>Batatas Recheadas Gourmet</h2>
+                <p>Batatas assadas com creme, queijo cheddar, bacon<br> crocante e ervas frescas, combinando sabores
+                    e<br> texturas irresistíveis.</p>
+                <p class="price">Preço: 10,00€ (3 unidades)</p>
+                <input class="botao" onclick="selecionarPrato('batatas recheadas gourmet')" type="submit" value="Adicionar ao pedido">
+
+                <label class="botao" for="popup4">Adicionar ao
+                    pedido</label>
+            </div>
+        </div>
+        <input type="hidden" name="origem" value="entradas.html">
+
+        <div class="esquerda">
+            <img alt="croquetes" src="images/croquetes.png">
+            <div class="card-content">
+                <h2>Croquetes Recheados</h2>
+                <p class="desc">Croquetes dourados e crocantes, com um recheio<br> cremoso e saboroso, perfeitos para
+                    uma experiência<br> de sabor irresistível.</p>
+                <p class="price">Preço: 9,00€ (6 unidades)</p>
+                <input class="botao" onclick="selecionarPrato('croquetes recheados')" type="submit" value="Adicionar ao pedido">
+                <label class="botao" for="popup4">Adicionar ao pedido</label>
+            </div>
+        </div>
+    </div>
+    <!-- Popup -->
+    <input class="popup-checkbox" id="popup4" type="checkbox">
+    <div class="popup-overlay">
+        <div class="popup-content">
+            <p class="negrito">Sucesso</p>
+            <p class="desc">O artigo selecionado foi adicionado ao<br>pedido!</p>
+            <label class="close-btn" for="popup4">Fechar</label>
+        </div>
+    </div>
+</form>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Vicario</h3>
+            <div class="social-icon">
+                <a href="https://www.instagram.com/instagram/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/Cristiano?locale=ms_MY" target="_blank"><i class="fa fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Categorias</h3>
+            <div class="categories-grid">
+                <ul class="categories-column">
+                    <li><a href="massas.html">Massas</a></li>
+                    <li><a href="pizzas.html">Pizzas</a></li>
+                    <li><a href="carnes.html">Carnes</a></li>
+                </ul>
+                <ul class="categories-column">
+                    <li><a href="entradas.html">Entradas</a></li>
+                    <li><a href="sobremesas.html">Sobremesas</a></li>
+                    <li><a href="bebidas.jsp">Bebidas</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Localização e Contacto</h3>
+            <p>Rua das Flores, Porto</p>
+            <p>224838743</p>
+        </div>
+    </div>
+</footer>
+<script src="js/adicionarprato.js"></script>
+</body>
+</html>

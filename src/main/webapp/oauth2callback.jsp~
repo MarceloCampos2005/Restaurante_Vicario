@@ -1,0 +1,79 @@
+<%@ page import="java.io.*, java.net.*, org.json.JSONObject" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.DriverManager" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String idToken = request.getParameter("credential"); // Token JWT do Google
+
+    if (idToken != null && !idToken.trim().isEmpty()) {
+        try {
+            // Valida o token com o Google
+            URL url = new URL("https://oauth2.googleapis.com/tokeninfo?id_token=" + URLEncoder.encode(idToken, "UTF-8"));
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("GET");
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            StringBuilder content = new StringBuilder();
+            String inputLine;
+            while ((inputLine = in.readLine()) != null) {
+                content.append(inputLine);
+            }
+            in.close();
+            con.disconnect();
+
+            JSONObject json = new JSONObject(content.toString());
+
+            // Verifica se o token foi emitido para o client ID correto
+            String audience = json.getString("aud");
+            String expectedClientId = "953329218003-s53k20ukahfepoh5tksoj1tdr14kqv4m.apps.googleusercontent.com";
+            if (!expectedClientId.equals(audience)) {
+                out.println("<p>Token inválido para este aplicativo.</p>");
+                return;
+            }
+
+            String email = json.getString("email");
+
+            // Dados do banco de dados
+            String urldb = "jdbc:mariadb://mysql-vicario.alwaysdata.net:3306/vicario_data";
+            String dbUser = "vicario";
+            String dbPassword = "MarceloMoura123";
+
+            // Carrega o driver MariaDB
+            Class.forName("org.mariadb.jdbc.Driver");
+
+            // Conecta e verifica se o e-mail já existe
+            try (Connection connect = DriverManager.getConnection(urldb, dbUser, dbPassword)) {
+                String sql = "SELECT * FROM administrador WHERE email = ?";
+                try (PreparedStatement stmt = connect.prepareStatement(sql)) {
+                    stmt.setString(1, email);
+                    ResultSet rs = stmt.executeQuery();
+
+                    if (rs.next()) {
+                        // Usuário já existe
+                        response.sendRedirect("admin_pedidos.jsp");
+                        return;
+                    } else {
+                        // Inserir novo usuário
+                        String sql2 = "INSERT INTO administrador (email) VALUES (?)";
+                        try (PreparedStatement stmt2 = connect.prepareStatement(sql2)) {
+                            stmt2.setString(1, email);
+                            stmt2.executeUpdate();
+                            response.sendRedirect("admin_pedidos.jsp");
+                            return;
+                        }
+                    }
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            out.println("<p>Erro ao processar login com Google: " + e.getMessage() + "</p>");
+        }
+    } else {
+%>
+<p>Erro: token não recebido.</p>
+<%
+    }
+%>

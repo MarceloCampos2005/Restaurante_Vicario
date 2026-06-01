@@ -1,0 +1,44 @@
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.admin-header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header h1 {
+    font-size: 28px;
+}
+
+.btn-success {
+    font-weight: bold;
+    padding: 10px 16px;
+    font-size: 16px;
+}
+
+.grafico-container {
+    width: 100%;
+    max-width: 100%;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.grafico-faturamento {
+    width: 100%;
+    max-width: 500px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+
+

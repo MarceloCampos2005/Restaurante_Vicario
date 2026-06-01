@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicario</title>
+    <link rel="stylesheet" href="Css/style.css">
+    <!--Fonte de Letra-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!--Ícones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+    <h1><a href="home.html" class="title">Vicario</a></h1>
+    <nav class="nav_em">
+        <div class="dropdown">
+            <a class="dropbtn">Ementas ▼</a>
+            <div class="dropdown-content">
+                <a href="massas.jsp">Massas</a>
+                <a href="pizzas.html">Pizzas</a>
+                <a href="carnes.html">Carnes</a>
+                <a href="entradas.html">Entradas</a>
+                <a href="sobremesas.html">Sobremesas</a>
+                <a href="bebidas.html">Bebidas</a>
+            </div>
+        </div>
+
+        <a href="about.jsp">Sobre Nós</a>
+        <a href="pedidotakeaway.html"><i class="fa fa-shopping-cart icon"></i></a>
+        <a href="perfil.jsp"><i class="fa fa-user-o icon_em"></i></a>
+    </nav>
+</header>
+<div data-layer="Sobre Nós" class="text_take_away">
+        Gestão dos Pedidos
+    </div>
+    <div class="take_away_box">
+        <div class="content_take_away_box">
+            <nav class="line">
+                <div class="left">
+                    <p>Pedido 2:</p>
+                </div>
+                <div class="center">
+                    <p>Quantidade</p>
+                </div>
+                <div class="right">
+                    <p>Preço</p>
+                </div>
+            </nav>
+            <nav class="line2">
+                <div class="left">
+                    <p>Entradas: Tábua de Enchidos Artesanais</p>
+                </div>
+                <div class="center">      
+                    <p>1</p> 
+                </div>
+                <div class="right">
+                    <p>14,00€</p> 
+                </div>
+            </nav>
+            <nav class="line2">
+                <div class="left">
+                    <p>Entradas: Canapés Gourmet</p>
+                </div>
+                <div class="center">           
+                    <p>3</p> 
+                </div>
+                <div class="right">
+                    <p>30,00€</p> 
+                </div>
+            </nav>
+            <nav class="line2">
+                <div class="left">
+                    <p>Pizzas: Queijo e Fiambre Pequena</p>
+                </div>
+                <div class="center">
+                    <p>3</p> 
+                </div>
+                <div class="right">
+                    <p>30,00€</p> 
+                </div>
+            </nav>
+            <nav class="line2">
+                <div class="left">
+                    <p>Bebidas: Água</p>
+                </div>
+                <div class="center">
+                    <p>3</p> 
+                </div>
+                <div class="right">
+                    <p>9,00€</p> 
+                </div>
+            </nav>
+            <nav class="line2">
+                <div class="right">
+                    <p class="negrito2">Preço total:</p>
+                    <p>83,00€</p>
+                </div>
+            </nav>
+            <a href="gestao.html"><button class="button_terminar">Voltar</button></a>
+        </div>
+    </div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Vicario</h3>
+            <div class="social-icon">
+                <a href="https://www.instagram.com/instagram/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/Cristiano?locale=ms_MY" target="_blank"><i class="fa fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Categorias</h3>
+            <div class="categories-grid">
+                <ul class="categories-column">
+                    <li><a href="massas.jsp">Massas</a></li>
+                    <li><a href="pizzas.html">Pizzas</a></li>
+                    <li><a href="carnes.html">Carnes</a></li>
+                </ul>
+                <ul class="categories-column">
+                    <li><a href="entradas.html">Entradas</a></li>
+                    <li><a href="sobremesas.html">Sobremesas</a></li>
+                    <li><a href="bebidas.html">Bebidas</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Localização e Contacto</h3>
+            <p>Rua das Flores, Porto</p>
+            <p>224838743</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

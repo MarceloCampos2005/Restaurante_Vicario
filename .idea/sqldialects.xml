@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/webapp/Adicionarpedido.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/about.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/aboutbackend.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/adicionar.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/admin_pedidos.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/bebidas.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/carnes.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/criarconta.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/criticas.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/entradas.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/estatisticas_restaurante.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/guardarPedido.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/index.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/login.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/massas.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/pagarPedido.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/pagelogin.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/pedidotakeaway.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/perfil.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/pizzas.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/planta_restaurante.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/registarPedido.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/registarconta.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/retirarpedido.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/sobremesas.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/verPedido.jsp" dialect="GenericSQL" />
+  </component>
+</project>
